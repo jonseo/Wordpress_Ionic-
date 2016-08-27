@@ -1,0 +1,20 @@
+<ion-view view-title="Cetagory Posts Lists">
+    <ion-content>
+       
+         <ion-list can-swipe="true">
+            <ion-item class="item item-thumbnail-left item-text-wrap item-icon-right" ng-repeat="data in post | filter: searchText" href="#/app/detail/{{data.id}}">
+                <img ng-src="{{data.better_featured_image.media_details.sizes.thumbnail.source_url}}" alt="">
+                <h2>{{data.title.rendered }}</h2>
+                <p ng-bind-html="data.excerpt.rendered">
+                 
+                </p>
+                <ion-option-button class="button-dark">
+                    <i class="icon ion-heart"></i>
+                </ion-option-button>
+            </ion-item>
+            
+            
+        </ion-list>
+        
+    </ion-content>
+</ion-view>
